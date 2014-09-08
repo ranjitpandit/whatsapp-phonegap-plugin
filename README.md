@@ -20,3 +20,18 @@ Example
     cordova.plugins.Whatsapp.send("1112223333");
 
     This will open a chat session in Whatsapp for the target contact.
+
+Installation
+------------
+
+    For cordova or ionic
+
+        cordova plugin add https://github.com/ranjitpandit/whatsapp-phonegap-plugin.git
+        ionic   plugin add https://github.com/ranjitpandit/whatsapp-phonegap-plugin.git
+
+    Add the following xml to all the app config.xml file:
+
+        <!-- for Android -->
+        <feature name="Whatsapp">
+            <param name="android-package" value="mobi.moica.whatsapp.Whatsapp" />
+        </feature>
