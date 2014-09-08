@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+    id="mobi.moica.whatsapp"
+    version="0.0.1">
+    <name>Whatsapp</name>
+    <description>Whatsapp Plugin</description>
+    <keywords>whatsapp</keywords>
+
+    <author>Ranjit Pandit</author>
+
+    <license>MIT</license>
+
+    <repo>https://github.com/ranjitpandit/whatsapp-phonegap-plugin.git</repo>
+
+    <issue>https://github.com/ranjitpandit/whatsapp-phonegap-plugin/issues</issue>
+
+    <js-module src="www/whatsapp.js" name="whatsapp">
+        <clobbers target="cordova.plugins.Whatsapp" />
+    </js-module>
+
+    <!-- android -->
+    <platform name="android">
+
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="Whatsapp">
+                <param name="android-package" value="mobi.moica.whatsapp.Whatsapp" />
+                <param name="onload" value="true" />
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/Whatsapp.java" target-dir="src/mobi/moica/whatsapp" />
+    </platform>
+
+</plugin>

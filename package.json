@@ -1,0 +1,17 @@
+{
+    "version": "0.0.1",
+    "name": "mobi.moica.whatsapp",
+    "cordova_name": "Whatsapp",
+    "description": "Whatsapp Plugin",
+    "license": "MIT",
+    "repo": "https://github.com/ranjitpandit/whatsapp-phonegap-plugin.git",
+    "issue": "https://github.com/ranjitpandit/whatsapp-phonegap-plugin/issues",
+    "keywords": [
+        "whatsapp"
+    ],
+    "platforms": [
+        "android",
+        "ios"
+    ],
+    "engines": []
+}
