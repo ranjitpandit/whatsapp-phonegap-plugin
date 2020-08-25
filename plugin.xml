@@ -31,5 +31,15 @@
 
         <source-file src="src/android/Whatsapp.java" target-dir="src/mobi/moica/whatsapp" />
     </platform>
+		
+	<platform name="ios">
+        <config-file target="config.xml" parent="/*">
+            <feature name="Whatsapp">
+                <param name="ios-package" value="Whatsapp" />
+            </feature>
+        </config-file>
+        <header-file src="src/ios/Whatsapp.h" />
+        <source-file src="src/ios/Whatsapp.m" />
+    </platform>
 
 </plugin>
