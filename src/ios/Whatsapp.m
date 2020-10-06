@@ -9,8 +9,14 @@
 
 - (void)send:(CDVInvokedUrlCommand*)command{
  
-
-    NSURL *whatsappURL = [NSURL URLWithString:@"whatsapp://send?phone=+5511974706010"];
+    NSString* num = [command.arguments objectAtIndex:0];
+    NSString* text = [command.arguments objectAtIndex:1];
+    
+    NSString *url =  [NSString stringWithFormat: @"%@%@%@%@", @"whatsapp://send?phone=",num, @"&text=",text];
+    NSLog(@"Passou aqui merda.... =%@",url);
+   
+    NSURL *whatsappURL = [NSURL URLWithString:url];
+   
     if ([[UIApplication sharedApplication] canOpenURL: whatsappURL])
     {
 
