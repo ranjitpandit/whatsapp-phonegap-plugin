@@ -13,7 +13,7 @@
     NSString* text = [command.arguments objectAtIndex:1];
     
     NSString *url =  [NSString stringWithFormat: @"%@%@%@%@", @"whatsapp://send?phone=",num, @"&text=",text];
-    NSLog(@"Passou aqui merda.... =%@",url);
+    NSLog(@"url.... =%@",url);
    
     NSURL *whatsappURL = [NSURL URLWithString:url];
    
@@ -25,7 +25,7 @@
     }
     else
     {
-       [self showMessage:@"Sem Whatsapp instalado para entrar em contato com o suporte"
+       [self showMessage:@"without whatsapp installed"
        withTitle:@"Erro"];
     }
 
