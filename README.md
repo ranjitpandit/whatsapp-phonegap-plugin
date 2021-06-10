@@ -17,7 +17,7 @@ Example
 -------
     Say you want to open a chat session with phone number: 111-222-3333
 
-    cordova.plugins.Whatsapp.send("1112223333");
+    cordova.plugins.Whatsapp.send("1112223333","Hello!");
 
     This will open a chat session in Whatsapp for the target contact.
 
