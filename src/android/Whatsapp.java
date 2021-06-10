@@ -17,16 +17,15 @@ public class Whatsapp extends CordovaPlugin {
     public boolean execute(String action, JSONArray args, CallbackContext callbackContext) throws JSONException {
         try {
             if (ACTION_WHATSAPP_SEND.equals(action)) {
-                   String send_to = args.getString(0);
-                   Uri mUri = Uri.parse("smsto:" + send_to);
-                   Intent mIntent = new Intent(Intent.ACTION_SENDTO, mUri);
-                   mIntent.setPackage("com.whatsapp");
-                   /* mIntent.putExtra("sms_body", "The text goes here"); */
-                   mIntent.putExtra("chat",true);
+                  
+				String url = "whatsapp://send?phone="+args.getString(0)+"&text="+args.getString(1);
+				Intent i = new Intent(Intent.ACTION_VIEW);
+				i.setData(Uri.parse(url));
 
-                   this.cordova.getActivity().startActivity(mIntent);
-                   callbackContext.success();
-                   return true;
+
+				this.cordova.getActivity().startActivity(i);
+				callbackContext.success();
+				return true;
             }
             callbackContext.error("Invalid action");
             return false;
